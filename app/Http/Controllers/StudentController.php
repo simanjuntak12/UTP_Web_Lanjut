@@ -15,23 +15,27 @@ class StudentController extends Controller
      */
     public function index(): View
     {
-        // 
+        // Fetch all students from the database
+        $students = Student::all();
+        return view('students.index')->with('students', $students);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(): View
     {
-        //
+        return view('students.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
-        //
+        $inout = $request->all();
+        Student::create($inout);
+        return redirect('students')->with('flsh_message', 'Student Added!');
     }
 
     /**
