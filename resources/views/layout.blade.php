@@ -88,6 +88,7 @@
                 <a href="#contact">Teacher</a>
                 <a href="#about">Courses</a>
                 <a href="#about">Enrollment</a>
+                <a href="#about">Enrollment</a>
                 <a href="#about">Payment</a>
                 
                 </div>
